@@ -1,5 +1,68 @@
-= Power Subsystem
+= Electrical Power Subsystem (EPS)
 
-The Electrical Power System (EPS) comprises three main components: the Power Distribution Unit (PDU), the Battery Board, and the solar panel assembly. The PDU manages the distribution of all power to the spacecraft and the interface between solar panels and batteries, and is controlled by the OBC.
+The EPS serves as the sole generator, handler, and distributor of power aboard the PULSE-A spacecraft, and its design is driven by several high-level functional requirements.
+
+.EPS Functional Requirements
+[cols="1,1,3", options="header"]
+|===
+| Level | Req. Number | Requirement
+
+| Functional
+| EPS-01
+| The EPS shall comply with all requirements in the most recent version of the CubeSat Design Specification.
+
+| Functional
+| EPS-02
+| The EPS shall generate energy from the sun.
+
+| Functional
+| EPS-03
+| The EPS shall provide energy storage.
+
+| Functional
+| EPS-04
+| The EPS shall distribute power to all Satellite subystems.
+
+| Functional
+| EPS-05
+| The EPS shall inhibit power to the Satellite at two levels while contained within a deployer.
+
+| Functional
+| EPS-06
+| The EPS shall be capable of providing power to the bus using only solar generation.
+
+| Functional
+| EPS-07
+| The EPS shall have an external charging port for its energy storage device.
+
+|===
+
+The requirements necessitate the use of three main blocks: Power Control & Distribution Unit (PCDU), the Battery Board, and the solar panel assembly. The PCDU manages the distribution of all power to the spacecraft and the interface between solar panels and batteries, and is managed by an onboard processor.
+
+.EPS Performance Requirements
+[cols="1,1,3", options="header"]
+|===
+| Level | Req. Number | Requirement
+| Performance
+| EPS-08
+| The EPS shall generate 11 Wh < Energy < 80 Wh (TBR) of energy during each orbit.
+
+| Performance
+| EPS-09
+| The EPS shall provide 13 Wh (TBR) < Capacity < 80 Wh of energy storage.
+
+| Performance
+| EPS-10
+| The EPS shall provide 7 W ± 2 W (TBR) average power during entire mission operations after initial boot-up.
+
+| Performance
+| EPS-11
+| The EPS shall be designed to provide 32 W ± 5 W (TBR) maximum continuous power during eclipse.
+
+| Performance
+| EPS-12
+| The EPS shall be designed to provide 50 W ± 10 W (TBR) peak power draw during deployment of external components.
+
+|===
 
 image::power.svg[]
